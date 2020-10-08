@@ -1,9 +1,171 @@
-
+outfitter "Military Weapons and Ammo"
+	"GAU-8 Avenger Autocannon"
+	"AP Heavy"
+	"AP Rounds"
 
 shipyard "Warplanes"
 	"F-16 Fighting Falcon"
+	"A-10 Warthog"
        
 planet Glaze
         shipyard "Warplanes"
+	outfitter "Military Weapons and Ammo"
 
 
+ship "F-16 Fighting Falcon"
+	sprite "ship/fighting falcon"
+	attributes
+		category "Transport"
+		"cost" 1880000
+		"shields" 0
+		"hull" 5000
+		"required crew" 1
+		"bunks" 2
+		"mass" 20
+		"drag" 2.5
+		"heat dissipation" 100
+		"fuel capacity" 300
+		"cargo space" 0
+		"outfit space" 1000
+		"weapon capacity" 1000
+		"engine capacity" 1000
+		weapon
+			"blast radius" 40
+			"shield damage" 500
+			"hull damage" 200
+			"hit force" 600
+		
+	outfits
+		"Meteor Missile Launcher" 4
+		"Meteor Missile" 140
+		"Gatling Gun" 4
+		"Gatling Gun Ammo" 12000
+		
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"Small Radar Jammer"
+		
+		"A520 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Afterburner" 
+		"Hyperdrive"
+		"Fuel Pod" 2
+
+	gun -5 0
+	gun 5 0
+	gun 6 0
+	gun -6 0
+	gun -5 0
+	gun 5 0
+	gun 6 0
+	gun -6 0
+	engine 0 -10
+	engine 0 -10
+	explode "tiny explosion" 15
+	explode "small explosion" 20
+	explode "medium explosion" 10
+	explode "large explosion" 2
+	"final explode" "final explosion small"
+	description "The F-16 Fighting Falcon was originally used for ground combat, but better warplanes soon outclassed it. A few of the Fighting Falcons were modified for use in space, where they remain an agile fighter for patrol missions."
+
+ship "A-10 Warthog"
+	sprite "ship/A-10 Warthog"
+	attributes
+		category "Transport"
+		"cost" 4630000
+		"shields" 0
+		"hull" 50000
+		"required crew" 2
+		"bunks" 2
+		"mass" 50
+		"drag" 2.5
+		"heat dissipation" 100
+		"fuel capacity" 500
+		"cargo space" 250
+		"outfit space" 1000
+		"weapon capacity" 1000
+		"engine capacity" 1000
+		weapon
+			"blast radius" 40
+			"shield damage" 500
+			"hull damage" 200
+			"hit force" 600
+		
+	outfits
+		"GAU-8 Avenger Autocannon" 1
+		"AP Heavy" 1000
+		
+		
+		
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"Small Radar Jammer"
+		
+		"A520 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Afterburner" 
+		"Hyperdrive"
+		"Fuel Pod" 2
+
+	gun 0 40
+	engine 0 -10
+	engine 0 -10
+	explode "tiny explosion" 15
+	explode "small explosion" 20
+	explode "medium explosion" 10
+	explode "large explosion" 2
+	"final explode" "final explosion small"
+	description "The iconic A-10 Warthog, modified for space. This ship is mostly used for orbital bombardment or all out attacks on larger, slower ships."
+
+# outfits
+
+outfit "GAU-8 Avenger Autocannon"
+	category "Secondary Weapons"
+	cost 159000
+	thumbnail "outfits/gau8"
+	"mass" 45
+	"outfit space" -50
+	"weapon capacity" -50
+	"gun ports" -1
+	"GAU-8 capacity" 5000
+	weapon
+		sprite  "projectile/gau8ammo"
+		ammo "AP Heavy"
+		icon "outfits/gau8"
+		"inaccuracy" 7
+		"velocity" 50
+		"lifetime" 1000
+		"submunition" "AP Rounds"
+		"reload" 0
+		"burst count" 10000
+		"burst reload" 0
+		"firing energy" .0001
+		"firing heat" 50
+		"shield damage" 50
+		"hull damage" 10
+		"cluster"
+		"hit effect" "bullet impact"
+	description "The autocannon mounted on the A-10. Can be mounted on other ships, but this isn't recomended if you have poor cooling or energy.
+		
+outfit "AP Heavy"
+	plural "AP Heavy Rounds"
+	category "Ammunition"	
+	cost 10
+	thumbnail "projectile/gau8ammo"
+	mass .002
+	"GAU-8 capacity" -1
+	description "Armor Piercing ammuntion for all sorts of weapons."	
+	
+outfit "AP Rounds"
+	weapon
+		sprite "projectile/gau8ammo"
+			"delay" 0
+			"random start frame"
+			"frame rate" 0
+		"random velocity" 50
+		"lifetime" 20
+		"random lifetime" 5
+		"shield damage" 50
+		"hull damage" 10
+		"hit force" 2
+		"hit effect" "bullet impact"
