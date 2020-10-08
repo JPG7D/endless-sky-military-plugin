@@ -108,8 +108,8 @@ ship "A-10 Warthog"
 		"Fuel Pod" 2
 
 	gun 0 40
-	engine 0 -10
-	engine 0 -10
+	engine 25 125
+	engine -25 125
 	explode "tiny explosion" 15
 	explode "small explosion" 20
 	explode "medium explosion" 10
@@ -145,7 +145,7 @@ outfit "GAU-8 Avenger Autocannon"
 		"hull damage" 10
 		"cluster"
 		"hit effect" "bullet impact"
-	description "The autocannon mounted on the A-10. Can be mounted on other ships, but this isn't recomended if you have poor cooling or energy.
+	description "The autocannon mounted on the A-10. Can be mounted on other ships.
 		
 outfit "AP Heavy"
 	plural "AP Heavy Rounds"
