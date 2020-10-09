@@ -2,6 +2,8 @@ outfitter "Military Weapons and Ammo"
 	"GAU-8 Avenger Autocannon"
 	"AP Heavy"
 	"AP Rounds"
+	"ATG-65 Missile"
+	"AIM-9 Sidewinder Missile"
 
 shipyard "Warplanes"
 	"F-16 Fighting Falcon"
@@ -94,6 +96,8 @@ ship "A-10 Warthog"
 	outfits
 		"GAU-8 Avenger Autocannon" 1
 		"AP Heavy" 1000
+		"ATG-65 Missile" 4
+		"AIM-9 Sidewinder Missile" 20
 		
 		
 		
@@ -107,6 +111,30 @@ ship "A-10 Warthog"
 		"Hyperdrive"
 		"Fuel Pod" 2
 
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
+	gun 0 40
 	gun 0 40
 	engine 25 125
 	engine -25 125
@@ -127,12 +155,12 @@ outfit "GAU-8 Avenger Autocannon"
 	"outfit space" -50
 	"weapon capacity" -50
 	"gun ports" -1
-	"GAU-8 capacity" 5000
+	"GAU-8 capacity" 1000
 	weapon
 		sprite  "projectile/gau8ammo"
 		ammo "AP Heavy"
 		icon "outfits/gau8"
-		"inaccuracy" 7
+		"inaccuracy" 15
 		"velocity" 50
 		"lifetime" 1000
 		"submunition" "AP Rounds"
@@ -144,8 +172,8 @@ outfit "GAU-8 Avenger Autocannon"
 		"shield damage" 50
 		"hull damage" 10
 		"cluster"
-		"hit effect" "bullet impact"
-	description "The autocannon mounted on the A-10. Can be mounted on other ships.
+		"hit effect" "tiny explosion"
+	description "The autocannon mounted on the A-10. Can be mounted on other ships. Extremely inaccurate, so use against targets you know you can destroy.
 		
 outfit "AP Heavy"
 	plural "AP Heavy Rounds"
@@ -168,4 +196,77 @@ outfit "AP Rounds"
 		"shield damage" 50
 		"hull damage" 10
 		"hit force" 2
-		"hit effect" "bullet impact"
+		"hit effect" "tiny explosion"
+
+outfit "ATG-65 Missile"
+	category "Secondary Weapons"
+	cost 5000
+	thumbnail "outfits/atg65"
+	"mass" 5
+	"outfit space" 0
+	"weapon capacity" -5
+	"gun ports" -1
+	weapon
+		sprite "outfits/atg65"
+			"no repeat"
+			"frame rate" .25
+		ammo "ATG-65 Missile"
+		stream
+		icon "projectile/atg65"
+		"hit effect" "large explosion"
+		"inaccuracy" 1
+		"velocity" 6
+		"lifetime" 800
+		"reload" 180
+		"firing energy" 10
+		"firing heat" 400
+		"acceleration" .8
+		"drag" .1
+		"turn" 4
+		"homing" 4
+		"radar tracking" .5
+		"optical tracking" 1
+		"trigger radius" 30
+		"blast radius" 50
+		"shield damage" 100
+		"hull damage" 1000
+		"hit force" 4000
+		"missile strength" 200
+	description "A very heavy missile mounted on the A-10. best used at groups of enemies whose shields are down."
+	description "	[ATG-65's are a one-shot weapon: each missile occupies a gun slot, and after it is fired, the slot it was in is left empty.]"
+
+outfit "AIM-9 Sidewinder Missile"
+	category "Secondary Weapons"
+	thumbnail "outfits/aim9"
+	cost 1000
+	"mass" 5
+	"outfit space" -1
+	"weapon capacity" -1
+	"gun ports" -1
+	weapon
+		sprite "outfits/aim9"
+			"frame rate" 1
+		ammo "AIM-9 Sidewinder Missile"
+		stream
+		icon "projectile/aim9"
+		"inaccuracy" 1
+		"velocity" 30 
+		"lifetime" 800
+		"reload" 90
+		"firing energy" 10
+		"firing heat" 400
+		"acceleration" 1
+		"drag" .1
+		"turn" 4
+		"homing" 4
+		"radar tracking" .5
+		"optical tracking" 1
+		"trigger radius" 30
+		"blast radius" 50
+		"shield damage" 100
+		"hull damage" 100
+		"hit force" 250
+		"hit effect" "medium explosion"
+		"missile strength" 50
+	description "The AGM-65 is a missile that is effective against clusters of enemies because of its blast radius and damage."
+	description "	[AIM-9's are a one-shot weapon: each missile occupies a gun slot, and after it is fired, the slot it was in is left empty.]"
