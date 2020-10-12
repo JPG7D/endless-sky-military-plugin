@@ -1,13 +1,8 @@
 outfitter "Military Weapons and Ammo"
-	"GAU-8 Avenger Autocannon"
-	"AP Heavy"
-	"AP Rounds"
-	"ATG-65 Missile"
-	"AIM-9 Sidewinder Missile"
+
 
 shipyard "Warplanes"
-	"F-16 Fighting Falcon"
-	"A-10 Warthog"
+
        
 planet Glaze
         shipyard "Warplanes"
